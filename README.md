@@ -8,6 +8,30 @@
   
   ---
 
+# Team 2 Proposal: Shot Spot
+
+## 1.Roles:
+
+Nanette and Mandie = Front-End
+Carla, Sean, Dylan = Back-End
+All = Everything!  
+
+## What are we doing:  
+
+1. The user finds a bar based on 3 categories: cheap drinks, unique drinks, great happy hour. 
+2. The user chooses the bar based on the location results, via which of the 3 category was chosen. 
+3. Once the user is at the bar, they can optionally check in with a name or username, and then input feedback (in real time, kind of like yelp). 
+
+## 2.  Elevator Pitch:
+
+“We are creating Shot Spot, an ideal way for weekend warriors to find a watering hole based on 3 categories: cheap drinks, unique drinks, and great happy hours.  The user chooses their location based on their chosen category.  Then once at the location can, in real-time, check in and make a comment.  The check-in and comment is a way for new users to get an idea of what they may experience and can make a more informed decision on where to go”
+
+## 3. Who is this for?  What Problem do they have?  What problem does this solve?:
+
+This app is for thirsty people looking for a place to consume a cheap drink, a unique drink or go to a great happy hour.  The problem that thirsty people often have is that they are upset they wasted money on an improperly or poorly mixed drink.  Shot spot solves this problem by giving real time information to users, so they can make a more informed decision.
+
+---
+
 # Project Starter
 
 In this activity we will add the provided boilerplate to group project repos.
