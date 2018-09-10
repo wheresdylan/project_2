@@ -1,9 +1,9 @@
  ## Team Members
   
-- Amanda Kramer
+- [Mandie Kramer](https://github.com/ImpunityJainne)
 - Carla Thurston
 - Dylan Marini
-- Nanette Labrada
+- [Nanette Labrada](https://github.com/nlabrada)
 - Sean Angle
   
   ---
