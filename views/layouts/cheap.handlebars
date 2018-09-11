@@ -1,0 +1,65 @@
+{{!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cheap Drinks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="public/styles/style.css" />
+    <script src="main.js"></script> 
+
+
+</head>
+<body> --}}
+
+<script>
+
+ar age = prompt("How Old are You?");
+    if(age >= 21){
+        alert ("Cheers! Let's find you a Shot Spot!")
+    } else if (age < 21){
+        alert ("Sorry, we cannot assist.  But, please visit us when you turn 21");
+    }
+                
+</script>
+
+<div class="container1">
+<div class="cheap"></div> 
+
+<h1>Cheap Drinks</h1>
+<p>Drag the slider to display your desired price range</p>
+        
+<div class="slidecontainer">
+    <input type="range" min="1" max="10" value="10" class="slider" id="myRange">
+        <p>$ <span id="demo"></span></p>
+</div>
+<button>Submit</button> 
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+
+<script> 
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+        
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+
+$("button").on("click", function() {
+    //$(AJAX call to api- for searching cheap drinks)
+
+   var amount = $("#myRange").val();
+   console.log (amount)
+
+})
+
+</script>
+
+
+
+                    
+<link rel="stylesheet" href="jquery.range.css"> 
+
+</body>
+</html>
