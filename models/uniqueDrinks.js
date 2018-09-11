@@ -8,5 +8,5 @@ module.exports = function(sequelize, DataTypes) {
         website: DataTypes.STRING,
   
     });
-    return unique;
+    return Unique;
   };
