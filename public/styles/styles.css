@@ -65,7 +65,7 @@ main {
   flex: 1 0 auto;
 }
 
-#logo{
+.logo{
   background-image: url("../images/logo2.png");
   margin-left: 36%;
   margin-top: 10%;
