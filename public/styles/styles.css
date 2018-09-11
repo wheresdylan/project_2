@@ -14,15 +14,21 @@ main {
 }
 
 #logo{
-  text-align: center;
-  margin-top: 15%;
-  font-size: 450%;
-  padding: 10%;
-  font-weight: bold;
-  background-color: #c2e6ff;
-  border-style: solid;
-  border-radius: 160px;
-  border-color: #f897b1;
+  background-image: url("../images/logo2.png");
+  margin-left: 36%;
+  margin-top: 10%;
+  width: 244px;
+  height: 296px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#noBtn{
+  margin-top: 18%;
+}
+
+#yesBtn{
+  margin-top: 20%;
 }
 
 .btn-floating.btn-large{
@@ -30,7 +36,6 @@ main {
   text-align: center;
   width: 300px;
   height: 300px;
-  margin-top: 40%;
   margin-left: 14%;
   padding-top: 27%;
   background-color: black;
@@ -39,3 +44,9 @@ main {
 .btn-large i {
   font-size: 5.6rem;
 }
+
+#ask{
+  margin-top: 24%;
+  text-align: center;
+}
+
