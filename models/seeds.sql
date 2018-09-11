@@ -4,7 +4,7 @@ INSERT INTO happyHour (name, address, phone, time, deal, image, website) VALUES 
 
 INSERT INTO happyHour (name, address, phone, time, deal, image, website) VALUES ("Drink well", "207 E 53rd St Austin, TX 78751", "512-614-6683", " 4 to 6 p.m. mon-friday", "$2 off its seasonal cocktails, $2 off wine glasses, and $1 off draft beers", "https://cdn.vox-cdn.com/uploads/chorus_image/image/60185469/Drink.Well_Facebook.0.0.jpg", "https://www.drinkwellaustin.com/");
 
-INSERT INTO cheapDrinks (name, address, phone,image, website) VALUES ("Dallas Nghtclub", "7113 Burnet Rd Austin, TX 78757", "512-452-1300", "https://assets3.thrillist.com/v1/image/1511401/size/tmg-venue_carousel_mobile.jpg", "http://danceatdallas.com/");
+INSERT INTO cheapDrinks (name, address, phone,image, website) VALUES ("Dallas Nightclub", "7113 Burnet Rd Austin, TX 78757", "512-452-1300", "https://assets3.thrillist.com/v1/image/1511401/size/tmg-venue_carousel_mobile.jpg", "http://danceatdallas.com/");
 
 INSERT INTO cheapDrinks(name, address, phone,image, website) VALUES ("Black Sheep Lodge", "2108 S Lamar Blvd Austin, TX 78704", "512-707-2744", "http://www.blacksheeplodge.com/wp-content/themes/black-sheep/img/$masthead3.jpg", "http://www.blacksheeplodge.com/");
 
