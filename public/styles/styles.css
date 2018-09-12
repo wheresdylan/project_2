@@ -65,7 +65,7 @@ main {
   flex: 1 0 auto;
 }
 
-#logo{
+.logo{
   background-image: url("../images/logo2.png");
   margin-left: 36%;
   margin-top: 10%;
@@ -83,14 +83,26 @@ main {
   margin-top: 20%;
 }
 
-.btn-floating.btn-large{
+.btn-floating.btn-large.waves-effect.waves-light.hoverable{
   font-size: 500%;
   text-align: center;
   width: 300px;
   height: 300px;
   margin-left: 14%;
   padding-top: 27%;
-  background-color: black;
+  background-color: #c2e6ff;
+
+}
+
+.btn-floating.btn-large.cool{
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin-left: 33%;
+  padding-top: 36%;
+  box-shadow: none;
+  margin-top: 15%;
+  background-color: #c2e6ff;
 }
 
 .btn-large i {
@@ -102,7 +114,34 @@ main {
   text-align: center;
 }
 
+<<<<<<< HEAD
 #map{
   width: 100%;
   height: 500px;
 }
+=======
+#floatingbtn1{
+  margin-top: 106%;
+}
+
+.fixed-action-btn{
+  margin-right: 37%;
+  margin-bottom: 121%;
+}
+
+#logobtn{
+  background-image: url("../images/logo2.png");
+  background-size: 100% 100%;
+  border-radius: 0%;
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  margin-left: 17%;
+  box-shadow: none;
+
+}
+
+.cool{
+  border-radius: 50%;
+}
+>>>>>>> 14c0a241a363604cd2c5a9857ad561a4303aec44
