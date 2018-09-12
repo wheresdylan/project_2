@@ -83,6 +83,17 @@ main {
   margin-top: 20%;
 }
 
+.btn-floating.btn-large.waves-effect.waves-light.hoverable{
+  font-size: 500%;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  margin-left: 14%;
+  padding-top: 27%;
+  background-color: black;
+
+}
+
 .btn-floating.btn-large.cool{
   text-align: center;
   width: 200px;
