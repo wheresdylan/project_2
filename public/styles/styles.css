@@ -83,15 +83,15 @@ main {
   margin-top: 20%;
 }
 
-.btn-floating.btn-large{
-  font-size: 500%;
+.btn-floating.btn-large.cool{
   text-align: center;
-  width: 350px;
-  height: 350px;
-  margin-left: 17%;
+  width: 200px;
+  height: 200px;
+  margin-left: 33%;
   padding-top: 36%;
-  background-color:transparent;
   box-shadow: none;
+  margin-top: 15%;
+  background-color: #c2e6ff;
 }
 
 .btn-large i {
@@ -103,20 +103,25 @@ main {
   text-align: center;
 }
 
-.floatingbtn1{
-  margin-top: 95%;
+#floatingbtn1{
+  margin-top: 106%;
 }
 
 .fixed-action-btn{
   margin-right: 37%;
   margin-bottom: 121%;
 }
-.btn-floating{
-  border-radius: 0%;
-}
-.logobtn{
+
+#logobtn{
   background-image: url("../images/logo2.png");
   background-size: 100% 100%;
+  border-radius: 0%;
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  margin-left: 17%;
+  box-shadow: none;
+
 }
 
 .cool{
