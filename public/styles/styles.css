@@ -8,6 +8,16 @@
     background-size: cover; 
 } */
 
+/* .logo{
+  background-image: url("../images/logo2.png");
+  margin-left: 36%;
+  margin-top: 10%;
+  width: 350px;
+  height: 400px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+} */
+
 .container1 {
   align-content: center;
   background: url ("cheapNeon.jpg");
@@ -65,85 +75,118 @@ main {
   flex: 1 0 auto;
 }
 
-.home-logo {
-  margin-left: 29%;
-  margin-top: 15%;
-}
+  /* mobile first */
+  .home-logo {
+    margin-left: 29%;
+    margin-top: 15%;
+  }
 
-/* .logo{
-  background-image: url("../images/logo2.png");
-  margin-left: 36%;
-  margin-top: 10%;
-  width: 350px;
-  height: 400px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-} */
+  #noBtn{
+    margin-top: 18%;
+  }
 
-#noBtn{
-  margin-top: 18%;
-}
+  #yesBtn{
+    margin-top: 20%;
+  }
 
-#yesBtn{
-  margin-top: 20%;
-}
+  .btn-floating.btn-large.waves-effect.waves-light.hoverable{
+    font-size: 500%;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    margin-left: 12%;
+    padding-top: 27%;
+    background-color: #c2e6ff;
+  }
 
-.btn-floating.btn-large.waves-effect.waves-light.hoverable{
-  font-size: 500%;
-  text-align: center;
-  width: 300px;
-  height: 300px;
-  margin-left: 14%;
-  padding-top: 27%;
-  background-color: #c2e6ff;
+  .btn-floating.btn-large.cool{
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    margin-left: 94%;
+    padding-top: 36%;
+    box-shadow: none;
+    margin-top: 15%;
+    background-color: #c2e6ff;
+  }
 
-}
+  .btn-large i {
+    font-size: 5.6rem;
+  }
 
-.btn-floating.btn-large.cool{
-  text-align: center;
-  width: 300px;
-  height: 300px;
-  margin-left: 94%;
-  padding-top: 36%;
-  box-shadow: none;
-  margin-top: 15%;
-  background-color: #c2e6ff;
-}
+  #ask{
+    margin-top: 24%;
+    margin-left: -1%;
+    text-align: center;
+  }
 
-.btn-large i {
-  font-size: 5.6rem;
-}
+  #floatingbtn1{
+    margin-top: 106%;
+  }
 
-#ask{
-  margin-top: 24%;
-  text-align: center;
-}
+  .container-fixed-action-btn{
+    margin-right: 65%;
+    margin-top: 15%;
+  }
 
-#floatingbtn1{
-  margin-top: 106%;
-}
+  .btn-floating.btn-large.logobtn{
+    margin-left: 87%;
+  }
 
-.container-fixed-action-btn{
-  margin-right: 65%;
-  margin-top: 15%;
-}
+  #logo{
+    background-image: url("../images/logo2.png");
+    background-size: 100% 100%;
+    border-radius: 0%;
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    box-shadow: none;
+  }
 
-.btn-floating.btn-large.logobtn{
-  margin-left: 87%;
-}
+  .cool{
+    border-radius: 50%;
+  }
 
-#logo{
-  background-image: url("../images/logo2.png");
-  background-size: 100% 100%;
-  border-radius: 0%;
-  background-color: transparent;
-  width: 350px;
-  height: 350px;
-  /* margin-left: 86%; */
-  box-shadow: none;
+  @media only screen and (min-width: 768px){
+    #logo{
+      background-image: url("../images/logo2.png");
+      background-size: 100% 100%;
+      border-radius: 0%;
+      background-color: transparent;
+      width: 150px;
+      height: 150px;
+      box-shadow: none;  
+    }
+  
+    #home{
+      margin-left: 16%;
+      margin-top: -7%;
+    }
 
-}
+    .home-logo{
+      margin-left: 41%;
+    }
 
-.cool{
-  border-radius: 50%;
-}
+    #ask{
+      margin-top: 5%;
+      margin-bottom: none;
+      text-align: center;
+    }
+
+    .btn-floating.btn-large.waves-effect.waves-light.hoverable{
+      width: 100px;
+      height: 100px;
+      margin-left: 37%;
+      padding-top: 2%;
+      background-color: #c2e6ff; 
+      margin-bottom: none;
+    }
+
+    .btn-large i {
+      font-size: 2.6rem;
+    }
+  
+    #ageButtons{
+      margin-top: -3%;
+    }
+  }
