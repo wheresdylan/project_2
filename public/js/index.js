@@ -103,5 +103,5 @@ $("#noBtn").on("click", function () {
 }); 
 
 $("#yesBtn").on("click", function () {
-  window.location.href="http://localhost:3000/home";
+  window.location.href="/home";
 }); 
