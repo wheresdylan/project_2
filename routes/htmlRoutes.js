@@ -19,7 +19,7 @@ module.exports = function(app) {
     res.render("happyhour");
   });
 
-  app.get("unique", function(req, res) {
+  app.get("/unique", function(req, res) {
     res.render("unique");
   });
 
