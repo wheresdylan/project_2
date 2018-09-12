@@ -23,6 +23,9 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
+require("./routes/unique-drinks-api")(app);
+require("./routes/happy-hour-api")(app);
+require("./routes/cheap-drinks-api")(app);
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
