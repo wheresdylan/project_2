@@ -65,15 +65,20 @@ main {
   flex: 1 0 auto;
 }
 
-.logo{
+.home-logo {
+  margin-left: 29%;
+  margin-top: 15%;
+}
+
+/* .logo{
   background-image: url("../images/logo2.png");
   margin-left: 36%;
   margin-top: 10%;
-  width: 244px;
-  height: 296px;
-  background-size: cover;
+  width: 350px;
+  height: 400px;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-}
+} */
 
 #noBtn{
   margin-top: 18%;
@@ -96,9 +101,9 @@ main {
 
 .btn-floating.btn-large.cool{
   text-align: center;
-  width: 200px;
-  height: 200px;
-  margin-left: 33%;
+  width: 300px;
+  height: 300px;
+  margin-left: 94%;
   padding-top: 36%;
   box-shadow: none;
   margin-top: 15%;
@@ -118,19 +123,23 @@ main {
   margin-top: 106%;
 }
 
-.fixed-action-btn{
-  margin-right: 37%;
-  margin-bottom: 121%;
+.container-fixed-action-btn{
+  margin-right: 65%;
+  margin-top: 15%;
 }
 
-#logobtn{
+.btn-floating.btn-large.logobtn{
+  margin-left: 87%;
+}
+
+#logo{
   background-image: url("../images/logo2.png");
   background-size: 100% 100%;
   border-radius: 0%;
   background-color: transparent;
   width: 350px;
   height: 350px;
-  margin-left: 17%;
+  /* margin-left: 86%; */
   box-shadow: none;
 
 }
