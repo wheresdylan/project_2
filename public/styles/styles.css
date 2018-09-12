@@ -86,11 +86,12 @@ main {
 .btn-floating.btn-large{
   font-size: 500%;
   text-align: center;
-  width: 300px;
-  height: 300px;
-  margin-left: 14%;
-  padding-top: 27%;
-  background-color: black;
+  width: 350px;
+  height: 350px;
+  margin-left: 17%;
+  padding-top: 36%;
+  background-color:transparent;
+  box-shadow: none;
 }
 
 .btn-large i {
@@ -102,3 +103,22 @@ main {
   text-align: center;
 }
 
+.floatingbtn1{
+  margin-top: 95%;
+}
+
+.fixed-action-btn{
+  margin-right: 37%;
+  margin-bottom: 121%;
+}
+.btn-floating{
+  border-radius: 0%;
+}
+.logobtn{
+  background-image: url("../images/logo2.png");
+  background-size: 100% 100%;
+}
+
+.cool{
+  border-radius: 50%;
+}
