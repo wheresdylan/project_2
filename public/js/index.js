@@ -98,6 +98,10 @@
 // $submitBtn.on("click", handleFormSubmit);
 // $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
+$("#noBtn").on("click", function () {
+  window.location.href="http://www.camy.org/resources/fact-sheets/consequences-of-underage-drinking-surgeon-general/index.html";
+}); 
+
 $("#yesBtn").on("click", function () {
-  window.location.href="http://localhost:3000/home";
+  window.location.href="/home";
 }); 
