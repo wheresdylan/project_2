@@ -4,7 +4,7 @@ module.exports = function (sequelize, DataTypes) {
     name: DataTypes.STRING,
     address: DataTypes.STRING,
     phone: DataTypes.STRING,
-    image: DataTypes.STRING,
+    image: DataTypes.STRING(511),
     website: DataTypes.STRING,
     description: DataTypes.STRING,
 
