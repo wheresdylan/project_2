@@ -6,24 +6,20 @@ $(document).ready(function () {
         var card = $(
             `
             <div id="card${index}" class="col s6 m4">
-            <div class="card">
-            <div class="card-image">
-                <img src="${url}">
-                <span class="card-title gradient">"${title}"</span>
-            </div>
-            <div class="card-content">
-                <strong>Card Content</strong>
-            </div>
-            </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="${url}">
+                        <span class="card-title gradient">"${title}"</span>
+                    </div>
+                    <div class="card-content">
+                        <strong>Card Content</strong>
+                    </div>
+                </div>
             </div>
             `
         );
         $(".addCard").append(card);
     };
-
-    //   var outer = $("<div class=\"col s6 m4\"" + index + "></div>")
-    //   var inner = $("<div class=\"card\"></div>")
-    //   var imageContainer = $("<div class=\"card\"></div>")
 
     function addCard() {
         $.get("api/cheap", function (data) {
@@ -49,9 +45,8 @@ $(document).ready(function () {
                 method: "POST",
 
             }).then(function(response){
-                // console.log("AM I RUNNING");
-            userLocation = response.location;
-            initMap();
+                userLocation = response.location;
+                initMap();
 
             });
 
@@ -61,7 +56,7 @@ $(document).ready(function () {
                     center: userLocation, "accuracy": 50,
                     zoom: 12
                 });
-                // console.log("AM I RUNNING");
+                
                 
                 infowindow = new google.maps.InfoWindow();
                 service = new google.maps.places.PlacesService(map);
@@ -118,7 +113,6 @@ $(document).ready(function () {
 
                         </div> 
                     </div>`);
-                    // infowindow.setContent(place.hours);
                     infowindow.open(map, this);
                 });  
             }
