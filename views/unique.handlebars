@@ -1,43 +1,32 @@
-
-
-    <nav>
-        <div class="nav-wrapper">
-            <div class="row">
-                <div class="col s12">
-                    <a class="brand-logo">Unique
-                        <span class="hide-on-med-and-down">&nbsp;Drinks</span>
-                    </a>
-                    <ul class="right">
-                        <li>
-                            <a href="https://s.codepen.io/j_holtslander/fullpage/ejZrqG" target="_blank"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<nav class="nav-wrapper"> {{!-- nav/header --}}
+    <div class="row">
+        <div class="col s12" >
+            <a href="/home"><img src="/images/logo2.png" height="40px" width="40px" id="smlLogo"></a><span class="brand-logo">Unique Drinks</span>
         </div>
-    </nav>
-    <br>
+    </div>
+</nav>
 
+<div class="container">
     <div class="row">
         <div class="col s12">
-            <h3>Check out the choices below and lets take shots!</h3>
+            <h5 style="text-align:center">Unique drinks for the adventurous!</h5>
         </div>
     </div>
-    <div class="row addCardTwo">
-      
+
+    {{!-- maps row --}}
+    <div class="row"> 
+        <div id="map"></div>
     </div>
 
-    <div id="map">
-        
-    </div>
+    {{!-- adds cards for each table item --}}
+    <div class="row addCardTwo"></div>
 
+</div> {{!-- end of container --}}
 
-    <!-- Gitter Chat Link -->
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <link rel="stylesheet" href="jquery.range.css">
-    <script src="/js/unique.js"></script>
+{{!-- Scripts, etc. --}}
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="jquery.range.css">
+<script src="/js/unique.js"></script>
 
 
 
