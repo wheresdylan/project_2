@@ -77,7 +77,7 @@
 
   /* mobile first */
   .home-logo {
-    margin-left: 29%;
+    margin-left: 30%;
     margin-top: 15%;
   }
 
@@ -92,30 +92,34 @@
   .btn-floating.btn-large.waves-effect.waves-light.hoverable{
     font-size: 500%;
     text-align: center;
-    width: 300px;
-    height: 300px;
-    margin-left: 12%;
-    padding-top: 27%;
+    width: 150px;
+    height: 150px;
+    margin-left: 6%;
+    padding-top: 15%;
     background-color: #c2e6ff;
+  }
+
+  #ageButtons{
+    margin-top: -6%;
   }
 
   .btn-floating.btn-large.cool{
     text-align: center;
-    width: 150px;
-    height: 150px;
-    padding-top: 36%;
+    width: 100px;
+    height: 100px;
+    padding-top: 11%;
     box-shadow: none;
-    margin-top: 15%;
+    margin-top: 7%;
     background-color: #c2e6ff;
   }
 
   .btn-large i {
-    font-size: 5.6rem;
+    font-size: 1.6rem;
   }
 
 
   #ask{
-    margin-top: 24%;
+    margin-top: 14%;
     margin-left: -1%;
     text-align: center;
   }
@@ -130,7 +134,13 @@
   }
 
   .btn-floating.btn-large.logobtn{
-    margin-left: 87%;
+    margin-left: 28%;
+    margin-top: 10%;
+  }
+
+  .row.home{
+    margin-top: 14%;
+    margin-left: 32%;
   }
 
   #logo{
@@ -138,8 +148,8 @@
     background-size: 100% 100%;
     border-radius: 0%;
     background-color: transparent;
-    width: 350px;
-    height: 350px;
+    width: 150px;
+    height: 150px;
     box-shadow: none;
   }
 
@@ -152,8 +162,8 @@
       background-size: 100% 100%;
       border-radius: 0%;
       background-color: transparent;
-      width: 150px;
-      height: 150px;
+      /* width: 150px;
+      height: 150px; */
       box-shadow: none;  
     }
   
@@ -162,8 +172,12 @@
       margin-top: -7%;
     }
 
+    .home-logo{
+      margin-left: 41%;
+    }
+
     #ask{
-      margin-top: 5%;
+      margin-top: 1%;
       margin-bottom: none;
       text-align: center;
     }
@@ -181,23 +195,21 @@
       font-size: 2.6rem;
     }
   
-    #ageButtons{
-      margin-top: -3%;
-    }
-
     .row.home{
-      margin-left: -19%;
+      margin-left: -16%;
       width: 121%;
+      margin-top: 7%;
     }
 
     .btn-floating.btn-large.cool{
       margin-left: 21%;
       width: 300px;
       height: 300px;
+      padding-top: 30%;
     }
 
     .btn-floating.btn-large.logobtn{
-      margin-left: 40%;
+      margin-left: 42%;
       margin-top: 5%;      
     }
 
