@@ -26,6 +26,10 @@
     height: 500px;
   }
 
+  .btn-floating.btn-large i {
+    color: black;
+  }
+
   /* /////////////////////// NAV BAR /////////////////////// */
 
   nav .brand-logo{
