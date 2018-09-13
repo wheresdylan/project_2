@@ -175,12 +175,7 @@ $(document).ready(function () {
                     </div>`);
                     // infowindow.setContent(place.hours);
                     infowindow.open(map, this);
-                });
-
-                    
-                
-        
-                
+                });  
             }
         });
     }
