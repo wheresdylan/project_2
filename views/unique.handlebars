@@ -1,71 +1,74 @@
-<nav>
-    <div class="nav-wrapper">
-        <div class="row">
-            <div class="col s12">
-                <a class="brand-logo">Unique
-                    <span class="hide-on-med-and-down">&nbsp;Drinks</span>
-                </a>
-                <ul class="right">
-                    <li>
-                        <a href="https://s.codepen.io/j_holtslander/fullpage/ejZrqG" target="_blank"></a>
-                    </li>
-                </ul>
-            </div>
+<nav class="nav-wrapper"> {{!-- nav/header --}}
+    <div class="row">
+        <div class="col s12" >
+            <a href="/home"><img src="/images/logo2.png" height="40px" width="40px" id="smlLogo"></a><span class="brand-logo">Unique Drinks</span>
         </div>
     </div>
 </nav>
-<br>
 
-<div class="row">
-    <div class="col 14">
-        <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Add a New Bar!</button>
-    </div>
-</div>
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <h4>Add A Bar</h4>
-
-        <div class="row">
-            <form class="col s12">
-                <div class="row modal-form-row">
-                    <div class="input-field col s12">
-                        <input id="name" type="text" class="validate">
-                        <label for="name">Name</label>
-                    </div>
-                </div>
-                 <div class="row">
-                    <div class="input-field col s12">
-                        <input id="city" type="text" class="validate">
-                        <label for="city">City</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="description" type="text" class="materialize-textarea validate"></textarea>
-                        <label for="description">Description of Drink and Cost</label>
-                    </div>
-                </div>
-            </form>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h5 style="text-align:center">Unique drinks for the adventurous!</h5>
         </div>
     </div>
-    <div class="modal-footer">
-        <a class=" modal-action modal-close waves-effect waves-green btn-flat" id="submit">Submit</a>
+
+    <div class="row">
+        <div class="col 14">
+            <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Add a New Bar!</button>
+        </div>
     </div>
-</div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Add A Bar</h4>
 
-
-{{!-- <div class="row">
-    <div class="col s12">
-        <h3>Check out the choices below and lets take shots!</h3>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row modal-form-row">
+                        <div class="input-field col s12">
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="city" type="text" class="validate">
+                            <label for="city">City</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="description" type="text" class="materialize-textarea validate"></textarea>
+                            <label for="description">Description of Drink and Cost</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat" id="submit">Submit</a>
+        </div>
     </div>
-</div> --}}
-<div class="row addCardTwo">
 
-</div>
+        {{!-- maps row --}}
+        <div class="row"> 
+            <div id="map"></div>
+        </div>
 
-<div id="map">
 
+
+        {{!-- adds cards for each table item --}}
+        <div class="row addCardTwo"></div>
+
+    {{!-- <div class="row">
+        <div class="col s12">
+            <h3>Check out the choices below and lets take shots!</h3>
+        </div>
+    </div> --}}
+
+
+   
 </div>
 
 

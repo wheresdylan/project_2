@@ -1,22 +1,20 @@
-<nav>
-    <div class="nav-wrapper">
-        <div class="row">
-            <div class="col s12">
-                <a class="brand-logo">Happy
-                    <span class="hide-on-med-and-down">&nbsp;Hour</span>
-                </a>
-                <ul class="right">
-                    <li>
-                        <a href="https://s.codepen.io/j_holtslander/fullpage/ejZrqG" target="_blank"></a>
-                    </li>
-                </ul>
-            </div>
+<nav class="nav-wrapper"> {{!-- nav/header --}}
+    <div class="row">
+        <div class="col s12" >
+            <a href="/home"><img src="/images/logo2.png" height="40px" width="40px" id="smlLogo"></a><span class="brand-logo">Happy Hour</span>
         </div>
     </div>
 </nav>
-<br>
 
-<div class="row">
+<div class="container">
+
+    <div class="row">
+        <div class="col s12">
+            <h5 style="text-align:center">Find your happy place!</h5>
+        </div>
+    </div>
+
+    <div class="row">
     <div class="col 14">
         <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Add a New Bar!</button>
     </div>
@@ -60,24 +58,19 @@
     </div>
 </div>
 
-{{!--
-<div class="row">
-    <div class="col s12">
-        <h3>Check out the choices below and lets take shots!</h3>
+
+    {{!-- maps row --}}
+    <div class="row"> 
+        <div id="map"></div>
     </div>
-</div> --}}
+
 <div class="row addCardThree">
 
 </div>
 
-<div id="map">
+</div> {{!-- end of container --}}
 
-</div>
-
-
-<!-- Gitter Chat Link -->
-
-
+{{!-- Scripts, etc. --}}
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" href="jquery.range.css">
 <script src="/js/happyhour.js"></script>

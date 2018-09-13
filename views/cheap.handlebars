@@ -1,86 +1,87 @@
-    <nav>
-        <div class="nav-wrapper">
-            <div class="row">
-                <div class="col s12">
-                    <a class="brand-logo">Cheap
-                        <span class="hide-on-med-and-down">&nbsp;Drinks</span>
-                    </a>
-                    <ul class="right">
-                        <li>
-                            <a href="https://s.codepen.io/j_holtslander/fullpage/ejZrqG" target="_blank"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<nav class="nav-wrapper"> {{!-- nav/header --}}
+    <div class="row">
+        <div class="col s12" >
+            <a href="/home"><img src="/images/logo2.png" height="40px" width="40px" id="smlLogo"></a><span class="brand-logo">Cheap Drinks</span>
         </div>
-    </nav>
-    <br>
-    {{!-- <div class="cheap">
+    </div>
+</nav>
 
-        <div class="slidecontainer">
-            <input type="range" min="1" max="10" value="10" class="slider" id="myRange">
-            <p style="font-size: 30px">$
-                <span id="demo"></span>
-            </p>
-        </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Choose Your Price Range!
-            <i class="material-icons right">SUBMIT</i>
-        </button>
-    </div> --}}
+<div class="container">{{!-- container div --}}
+
+    {{!-- DO NOT DELETE! This is the slider bar for price; we may still use it.
     
     <div class="row">
-    <div class="col 14">
-        <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Add a New Bar!</button>
-    </div>
-</div>
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <h4>Add A Bar</h4>
 
-        <div class="row">
-            <form class="col s12">
-                <div class="row modal-form-row">
-                    <div class="input-field col s12">
-                        <input id="name" type="text" class="validate">
-                        <label for="name">Name</label>
-                    </div>
-                </div>
-                 <div class="row">
-                    <div class="input-field col s12">
-                        <input id="city" type="text" class="validate">
-                        <label for="city">City</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="description" type="text" class="materialize-textarea validate"></textarea>
-                        <label for="description">Description of Drink and Cost</label>
-                    </div>
-                </div>
-            </form>
+        <div class="col s12 m6 offset-m3">
+
+            <div class="slidecontainer">
+                <input type="range" min="1" max="10" value="10" class="slider" id="myRange">
+                <p style="font-size: 30px">$<span id="demo"></span></p>
+            </div>
+
+            <button class="btn waves-effect waves-light" type="submit" name="action">
+                <i class="material-icons right">Show me cheap!</i>
+            </button>
+
         </div>
-    </div>
-    <div class="modal-footer">
-        <a class=" modal-action modal-close waves-effect waves-green btn-flat" id="submit">Submit</a>
-    </div>
-</div>
 
-
-    {{!-- <div class="row">
-        <div class="col s12">
-            <h3>Check out the choices below and lets take shots!</h3>
-        </div>
     </div> --}}
 
+    <div class="row">
+        <div class="col s12">
+            <h5 style="text-align:center">Check out these cheap shot spots!</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col 14">
+            <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Add a New Bar!</button>
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Add A Bar</h4>
 
-    <div id="map"></div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row modal-form-row">
+                        <div class="input-field col s12">
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="city" type="text" class="validate">
+                            <label for="city">City</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="description" type="text" class="materialize-textarea validate"></textarea>
+                            <label for="description">Description of Drink and Cost</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat" id="submit">Submit</a>
+        </div>
+    </div>
 
+    {{!-- maps row --}}
+    <div class="row"> 
+        <div id="map"></div>
+    </div>
+
+    {{!-- adds cards for each table item --}}
     <div class="row addCard"></div>
 
-</div>
+</div> {{!-- end of container --}}
 
 
+{{!-- Scripts, etc. --}}
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" href="jquery.range.css">
 <script src="/js/cheap.js"></script>
