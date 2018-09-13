@@ -93,17 +93,36 @@ $(document).ready(function () {
                 }
             };
 
-            function createMarker(place) {
+            function createMarker(place, index) {
+                var image = '../images/logo2thumb.png'
                 var placeLoc = place.geometry.location;
                 var marker = new google.maps.Marker({
                     map: map,
+                    icon: image,
                     position: place.geometry.location
                 });
 
                 google.maps.event.addListener(marker, 'click', function () {
                     infowindow = new google.maps.InfoWindow();
                     console.log(infowindow);
-                    infowindow.setContent(place.name);
+                    infowindow.setContent(
+                    `<div id="content"> 
+                        <div id="siteNotice"> 
+                        </div>
+
+                        <h5 id="firstHeading" class="firstHeading">
+                        ` + place.name + `
+                        </h5> 
+                        
+                        <div id="bodyContent"> 
+
+                            <h6>
+                            <a href="#card${index}"> 
+                            More Info!</a> 
+                            </h6>
+
+                        </div> 
+                    </div>`);
                     // infowindow.setContent(place.hours);
                     infowindow.open(map, this);
                 });
