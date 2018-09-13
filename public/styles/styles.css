@@ -8,16 +8,19 @@
     background-size: cover; 
 } */
 
+img, a {
+  border:none;
+  outline: none;
+}
+
 .container1 {
   align-content: center;
   background: url ("cheapNeon.jpg");
 } 
 
-
-
-.slidecontainer {
+/* .slidecontainer {
   width: 25%;
-}
+} */
 
 .slider {
   -webkit-appearance: none;
@@ -58,7 +61,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #d3b9c5;
+  background-color: white;
 }
 
 main {
@@ -146,7 +149,10 @@ main {
   height: 350px;
   /* margin-left: 86%; */
   box-shadow: none;
+}
 
+#smlLogo {
+  margin-top: 10px;
 }
 
 .cool{

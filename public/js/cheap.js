@@ -60,55 +60,75 @@ $(document).ready(function () {
     //   var inner = $("<div class=\"card\"></div>")
     //   var imageContainer = $("<div class=\"card\"></div>")
 
-    function addCard() {
-        $.get("api/cheap", function (data) {
-            var arr = []
+function addCard() {
+    $.get("api/cheap", function (data) {
+        var arr = []
 
-            for (var i = 0; i < data.length; i++){
-                arr.push(data[i].name);
-                makeCard(i, data[i].image, data[i].name);
+        for (var i = 0; i < data.length; i++){
+            arr.push(data[i].name);
+            makeCard(i, data[i].image, data[i].name);
 
-            }
-            console.log(arr)
-            var map;
-            var service;
-            var infowindow;
-            var barNames = arr
-            var userLocation;
-            var x = 0;
+        }
+        console.log(arr)
+        var map;
+        var service;
+        var infowindow;
+        var barNames = arr
+        var userLocation;
+        var x = 0;
 
-            var queryUrl = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCVf591AZ-evHODFReCvcQ56eAJZecmLgc";
+        var queryUrl = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCVf591AZ-evHODFReCvcQ56eAJZecmLgc";
 
-            $.ajax({
-                url: queryUrl,
-                method: "POST",
+        $.ajax({
+            url: queryUrl,
+            method: "POST",
 
-            }).then(function(response){
-                // console.log("AM I RUNNING");
-            userLocation = response.location;
-            initMap();
+        }).then(function(response){
+            // console.log("AM I RUNNING");
+        userLocation = response.location;
+        initMap();
 
+        });
+
+
+        var initMap = function() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: userLocation, "accuracy": 50,
+                zoom: 12
             });
+            // console.log("AM I RUNNING");
+            
+            infowindow = new google.maps.InfoWindow();
+            service = new google.maps.places.PlacesService(map);
+            findplaces();
+        }
 
+        function findplaces(){
+            service.findPlaceFromQuery({ 
+                query: barNames[x],
+                fields: ['photos', 'formatted_address', 'name', 'rating', 'opening_hours', 'geometry']
+            },callback);
+        }
 
-            var initMap = function() {
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: userLocation, "accuracy": 50,
-                    zoom: 12
-                });
-                // console.log("AM I RUNNING");
-                
-                infowindow = new google.maps.InfoWindow();
-                service = new google.maps.places.PlacesService(map);
+        function callback(results, status) {
+            if (status == google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                    console.log(barNames[x] + " found");
+                    createMarker(results[i]);
+                }
+            }
+            x++;
+            if(x < barNames.length){
                 findplaces();
             }
+        };
 
-            function findplaces(){
-                service.findPlaceFromQuery({ 
-                    query: barNames[x],
-                    fields: ['photos', 'formatted_address', 'name', 'rating', 'opening_hours', 'geometry']
-                },callback);
-            }
+        function createMarker(place) {
+            var placeLoc = place.geometry.location;
+            var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location
+            });
 
             function callback(results, status) {
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
