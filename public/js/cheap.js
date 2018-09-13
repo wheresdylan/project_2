@@ -49,9 +49,8 @@ function makeCard(index, url, title) {
                 method: "POST",
 
             }).then(function(response){
-                // console.log("AM I RUNNING");
-            userLocation = response.location;
-            initMap();
+                userLocation = response.location;
+                initMap();
 
             });
 
@@ -61,7 +60,7 @@ function makeCard(index, url, title) {
                     center: userLocation, "accuracy": 50,
                     zoom: 12
                 });
-                // console.log("AM I RUNNING");
+                
                 
                 infowindow = new google.maps.InfoWindow();
                 service = new google.maps.places.PlacesService(map);
@@ -74,21 +73,6 @@ function makeCard(index, url, title) {
                     fields: ['photos', 'formatted_address', 'name', 'rating', 'opening_hours', 'geometry']
                 },callback);
             }
-
-            function callback(results, status) {
-                if (status == google.maps.places.PlacesServiceStatus.OK) {
-                    for (var i = 0; i < results.length; i++) {
-                        console.log(barNames[x] + " found");
-                        createMarker(results[i]);
-                    }
-                }
-                x++;
-                if(x < barNames.length){
-                    findplaces();
-                }
-            };
-
-            
 
             function callback(results, status) {
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -133,7 +117,6 @@ function makeCard(index, url, title) {
 
                         </div> 
                     </div>`);
-                    // infowindow.setContent(place.hours);
                     infowindow.open(map, this);
                 });  
             }

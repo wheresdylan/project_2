@@ -24,11 +24,6 @@ $(document).ready(function () {
         $(".addCardThree").append(card);
     }
 
-
-    //   var outer = $("<div class=\"col s6 m4\"" + index + "></div>")
-    //   var inner = $("<div class=\"card\"></div>")
-    //   var imageContainer = $("<div class=\"card\"></div>")
-
     function addCard() {
         $.get("api/happyhour", function (data) {
             var arr = []
@@ -84,7 +79,7 @@ $(document).ready(function () {
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
                     for (var i = 0; i < results.length; i++) {
                         console.log(barNames[x] + " found");
-                        createMarker(results[i]);
+                        createMarker(results[i], x);
                     }
                 }
                 x++;
@@ -123,7 +118,6 @@ $(document).ready(function () {
 
                         </div> 
                     </div>`);
-                    // infowindow.setContent(place.hours);
                     infowindow.open(map, this);
                 });
 
