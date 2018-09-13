@@ -114,22 +114,7 @@ $(document).ready(function () {
                     fields: ['photos', 'formatted_address', 'name', 'rating', 'opening_hours', 'geometry']
                 },callback);
             }
-
-            function callback(results, status) {
-                if (status == google.maps.places.PlacesServiceStatus.OK) {
-                    for (var i = 0; i < results.length; i++) {
-                        console.log(barNames[x] + " found");
-                        createMarker(results[i]);
-                    }
-                }
-                x++;
-                if(x < barNames.length){
-                    findplaces();
-                }
-            };
-
             
-
             function callback(results, status) {
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
                     for (var i = 0; i < results.length; i++) {
@@ -180,75 +165,4 @@ $(document).ready(function () {
         });
     }
 
-
-    // var map;
-    // var service;
-    // var infowindow;
-    // var barNames = [data[i].name]
-    // var userLocation;
-    // var x = 0;
-
-    // var queryUrl = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCVf591AZ-evHODFReCvcQ56eAJZecmLgc";
-
-    // $.ajax({
-    //     url: queryUrl,
-    //     method: "POST",
-
-    // }).then(function(response){
-    //     console.log("AM I RUNNING");
-    // userLocation = response.location;
-    // initMap();
-
-    // });
-
-
-    // var initMap = function() {
-    //     map = new google.maps.Map(document.getElementById('map'), {
-    //         center: userLocation, "accuracy": 50,
-    //         zoom: 12
-    //     });
-    //     console.log("AM I RUNNING");
-        
-    //     infowindow = new google.maps.InfoWindow();
-    //     service = new google.maps.places.PlacesService(map);
-    //     findplaces();
-    // }
-
-    // function findplaces(){
-    //     service.findPlaceFromQuery({ 
-    //         query: barNames[x],
-    //         fields: ['photos', 'formatted_address', 'name', 'rating', 'opening_hours', 'geometry']
-    //     },callback);
-    // }
-
-    // function callback(results, status) {
-    //     if (status == google.maps.places.PlacesServiceStatus.OK) {
-    //         for (var i = 0; i < results.length; i++) {
-    //             console.log(barNames[x] + " found");
-    //             createMarker(results[i]);
-    //         }
-    //     }
-    //     x++;
-    //     if(x < barNames.length){
-    //         findplaces();
-    //     }
-    // };
-
-    // function createMarker(place) {
-    //     var placeLoc = place.geometry.location;
-    //     var marker = new google.maps.Marker({
-    //         map: map,
-    //         position: place.geometry.location
-    //     });
-
-    //     google.maps.event.addListener(marker, 'click', function() {
-    //         infowindow = new google.maps.InfoWindow();
-    //         console.log(infowindow);
-    //         infowindow.setContent(place.name);
-    //         // infowindow.setContent(place.hours);
-    //         infowindow.open(map, this);
-    //     });
-    // }
-
-    
 });
