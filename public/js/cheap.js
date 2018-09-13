@@ -1,62 +1,5 @@
 $(document).ready(function () {
 
-<<<<<<< HEAD
-addCard();
-
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
-
-slider.oninput = function () {
-    output.innerHTML = this.value;
-};
-
-// $(AJAX call to api- for searching cheap drinks)
-$("button").on("click", function () {
-
-    var amount = $("#myRange").val();
-    console.log(amount);
-
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    var elems = document.querySelectorAll(".carousel");
-    var instances = M.Carousel.init(elems, options);
-    instances.next();
-});
-
-// Image/Data cards for locations
-
-function newCard(newCard) {
-    // $(".addCard").append('<div class="col s6 m4"</div>');
-    // $(".col s6 m4").append('<div class="card"</div>');
-    // $(".card").append('<div class="card-image"</div>');
-    // $(".card-image").append('<img src=' + newCard + '>');
-    // $(".card-image").append('<span class="card-title gradient">"Titles Card"</span>');
-    // $(".card").append('<div class="card-content"</div>');
-    // $(".card-content").append('<strong>"Card Content"</strong>');
-    console.log(newCard);
-};
-
-function makeCard(index, url, title) {
-    var card = $(
-        `
-        <div id="card${index}" class="col s6 m4">
-        <div class="card">
-        <div class="card-image">
-            <img src="${url}">
-            <span class="card-title gradient">"${title}"</span>
-        </div>
-        <div class="card-content">
-            <strong>Card Content</strong>
-        </div>
-        </div>
-        </div>
-        `
-    );
-    $(".addCard").append(card);
-};
-=======
     addCard();
 
     var slider = document.getElementById("myRange");
@@ -117,7 +60,6 @@ function makeCard(index, url, title) {
         );
         $(".addCard").append(card);
     };
->>>>>>> 3eeb0a15adb37452dda11808ca728dd2cd81cbc4
 
     //   var outer = $("<div class=\"col s6 m4\"" + index + "></div>")
     //   var inner = $("<div class=\"card\"></div>")
@@ -172,7 +114,7 @@ function makeCard(index, url, title) {
                     fields: ['photos', 'formatted_address', 'name', 'rating', 'opening_hours', 'geometry']
                 },callback);
             }
-            
+
             function callback(results, status) {
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
                     for (var i = 0; i < results.length; i++) {
