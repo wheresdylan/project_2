@@ -1,25 +1,3 @@
-  /* body {    
-      background: linear-gradient(
-          rgba(20,20,20, .4), 
-          rgba(20,20,20, .4)),
-          url("../public/cheapNeon.jpg");;
-      background-repeat: no-repeat;
-      display: flex;
-      background-size: cover; 
-  } */
-
-  /* .logo{
-    background-image: url("../images/logo2.png");
-    margin-left: 36%;
-    margin-top: 10%;
-    width: 350px;
-    height: 400px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-  } */
-
-
-
   .container1 {
     align-content: center;
     background: url ("cheapNeon.jpg");
@@ -68,7 +46,7 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #d3b9c5;
+    background-color: white;
   }
 
   main {
@@ -154,9 +132,24 @@
     box-shadow: none;
   }
 
+  #map{
+    width: 100%;
+    height: 500px;
+  }
+  
+/* ////////////////////////////////////////////////////////////////////// */
 
 
   @media only screen and (min-width: 768px){
+
+    img, a {
+      border:none;
+      outline: none;
+    }
+    
+    #smlLogo {
+      margin-top: 10px;
+    }
 
     #logo{
       background-image: url("../images/logo2.png");
@@ -216,3 +209,10 @@
     }
 
   }
+
+
+
+
+
+
+
