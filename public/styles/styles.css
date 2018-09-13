@@ -152,3 +152,11 @@ main {
 .cool{
   border-radius: 50%;
 }
+
+.modal {
+  max-height: 90%;
+}
+
+.modal-form-row {
+  margin-bottom: 0px;
+}

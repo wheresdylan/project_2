@@ -6,6 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     phone: DataTypes.STRING,
     image: DataTypes.STRING,
     website: DataTypes.STRING,
+    description: DataTypes.STRING,
   
   });
   return Unique;

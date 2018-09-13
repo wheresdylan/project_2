@@ -2,38 +2,27 @@ $(document).ready(function () {
 
     addCard();
 
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
+    // var slider = document.getElementById("myRange");
+    // var output = document.getElementById("demo");
+    // output.innerHTML = slider.value;
 
-    slider.oninput = function () {
-        output.innerHTML = this.value;
-    };
+    // slider.oninput = function () {
+    //     output.innerHTML = this.value;
+    // };
 
-    $("button").on("click", function () {
-        //$(AJAX call to api- for searching cheap drinks)
+    // $("button").on("click", function () {
+    //     //$(AJAX call to api- for searching cheap drinks)
 
-        var amount = $("#myRange").val();
-        console.log(amount);
+    //     var amount = $("#myRange").val();
+    //     console.log(amount);
 
-    });
+    // });
 
-    document.addEventListener("DOMContentLoaded", function () {
-        var elems = document.querySelectorAll(".carousel");
-        var instances = M.Carousel.init(elems, options);
-        instances.next();
-    });
-
-    function newCard(newCard) {
-        // $(".addCard").append('<div class="col s6 m4"</div>');
-        // $(".col s6 m4").append('<div class="card"</div>');
-        // $(".card").append('<div class="card-image"</div>');
-        // $(".card-image").append('<img src=' + newCard + '>');
-        // $(".card-image").append('<span class="card-title gradient">"Titles Card"</span>');
-        // $(".card").append('<div class="card-content"</div>');
-        // $(".card-content").append('<strong>"Card Content"</strong>');
-        console.log(newCard);
-    }
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var elems = document.querySelectorAll(".carousel");
+    //     var instances = M.Carousel.init(elems, options);
+    //     instances.next();
+    // });
 
 
     function makeCard(index, url, title) {
@@ -142,6 +131,80 @@ $(document).ready(function () {
             
         });
     }
+
+    $('.modal-trigger').leanModal();
+
+    $("#submit").on("click", function () {
+
+        //$(AJAX call to api- for searching cheap drinks)
+
+        var barName = $("#name").val();
+        var city = $("#city").val();
+        var description = $("#description").val();
+
+        var newCityName = city.replace(/\s/g, "+");
+        var newbarName = barName.replace(/\s/g, "+");
+
+        queryInput = newbarName + "+" + newCityName;
+
+
+
+        var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        var queryURL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + queryInput + "&key=AIzaSyCVf591AZ-evHODFReCvcQ56eAJZecmLgc";
+
+        //ajax to get the place id
+        $.ajax({
+            url: proxyUrl + queryURL,
+            method: "GET",
+
+        }).then(function (response) {
+            // console.log("AM I RUNNING");
+
+
+            var queryUrl = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" + response.results[0].place_id + "&key=AIzaSyCVf591AZ-evHODFReCvcQ56eAJZecmLgc"
+
+            //ajax to get the place details
+            $.ajax({
+                url: proxyUrl + queryUrl,
+                method: "GET",
+
+            }).then(function (response) {
+                console.log(response);
+
+
+                var barImage = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.result.photos[0].photo_reference + "&key=AIzaSyCVf591AZ-evHODFReCvcQ56eAJZecmLgc";
+                var address = response.result.formatted_address;
+                var phoneNumber = response.result.international_phone_number;
+                var website = response.result.website;
+
+                console.log(barName);
+                console.log(address);
+                console.log(phoneNumber);
+                console.log(barImage);
+                console.log(website);
+
+
+                var addBarApi = {
+                    name: barName,
+                    address: address,
+                    phone: phoneNumber,
+                    image: barImage,
+                    website: website,
+                    description: description
+
+                }
+
+
+                $.post("api/cheap",addBarApi );
+
+            });
+
+        });
+
+
+
+    });
+
 
     // var map;
     // var service;
