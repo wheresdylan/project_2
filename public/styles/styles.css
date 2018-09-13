@@ -44,7 +44,6 @@
 
   body {
     display: flex;
-<<<<<<< HEAD
     background-size: cover; 
 } */
 
@@ -98,7 +97,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #d3b9c5;
+  background-color:white;
 }
 
 main {
@@ -200,7 +199,6 @@ main {
 .modal-form-row {
   margin-bottom: 0px;
 }
-=======
     min-height: 100vh;
     flex-direction: column;
     background-color: white;
@@ -373,4 +371,3 @@ main {
 
 
 
->>>>>>> master
