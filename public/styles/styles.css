@@ -4,7 +4,7 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #e7eff7;
+    background-color: white;
   }
 
   main {
@@ -33,7 +33,7 @@
   }
 
   nav{
-    background-color: #faf8ff;
+    background-color: white;
   }
 
   #smlLogo {
