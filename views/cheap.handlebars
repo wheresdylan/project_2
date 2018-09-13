@@ -1,49 +1,50 @@
-<nav class="nav-wrapper">
-
+<nav class="nav-wrapper"> {{!-- nav/header --}}
     <div class="row">
-
         <div class="col s12">
             <img src="/images/logo2.png" height="40px" width="40px" id="smlLogo"><span class="brand-logo">Cheap Drinks</span>
         </div>
+    </div>
+</nav>
 
-    </div> {{!-- end of row in nav --}}
+<div class="container">{{!-- container div --}}
 
-</nav> {{!-- end of nav --}}
-
-<div class="container">
-
+    {{!-- DO NOT DELETE! This is the slider bar for price; we may still use it.
+    
     <div class="row">
 
-        <div class="col s12">
+        <div class="col s12 m6 offset-m3">
 
             <div class="slidecontainer">
                 <input type="range" min="1" max="10" value="10" class="slider" id="myRange">
-                <p style="font-size: 30px">$<span id="demo"></span>
-                </p>
+                <p style="font-size: 30px">$<span id="demo"></span></p>
             </div>
+
             <button class="btn waves-effect waves-light" type="submit" name="action">
                 <i class="material-icons right">Show me cheap!</i>
             </button>
 
         </div>
 
-    </div>
+    </div> --}}
 
     <div class="row">
-
         <div class="col s12">
             <h5>Check out these cheap shot spots!</h5>
         </div>
-
     </div>
 
-    <div id="map"></div>
+    {{!-- maps row --}}
+    <div class="row"> 
+        <div id="map"></div>
+    </div>
 
+    {{!-- adds cards for each table item --}}
     <div class="row addCard"></div>
 
 </div>
 
 
+{{!-- Scripts, etc. --}}
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" href="jquery.range.css">
 <script src="/js/cheap.js"></script>
