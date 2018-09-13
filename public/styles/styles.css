@@ -1,3 +1,41 @@
+  /* /////////////////////// MAIN /////////////////////// */
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #e7eff7;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  #logo{
+    background-image: url("../images/logo2.png");
+    background-size: 100% 100%;
+    border-radius: 0%;
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    box-shadow: none;
+  }
+
+  #map{
+    width: 100%;
+    height: 500px;
+  }
+
+  /* /////////////////////// NAV BAR /////////////////////// */
+
+  nav .brand-logo{
+    color: black;
+  }
+
+  nav{
+    background-color: #faf8ff;
+  }
+
   #smlLogo {
     margin-top: 10px;
   }
@@ -11,6 +49,12 @@
     align-content: center;
     background: url ("cheapNeon.jpg");
   } 
+
+  .brand-logo{
+    font-family: 'Fugaz One', cursive;
+  }
+
+/* /////////////////////// **** S L I D E R **** ///////////////////////
 
   .slidecontainer {
     width: 25%;
@@ -45,27 +89,37 @@
     height: 25px;
     background: #4CAF50;
     cursor: pointer;
-  }
+  } */
 
   .list-group-item {
     line-height: 2.5;
   }
 
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-color: white;
-  }
+  /* /////////////////////// INDEX /////////////////////// */
 
-  main {
-    flex: 1 0 auto;
-  }
-
-  /* mobile first */
   .home-logo {
     margin-left: 30%;
     margin-top: 15%;
+  }
+
+  #ask{
+    margin-top: 14%;
+    margin-left: -1%;
+    text-align: center;
+  }
+
+  #ageButtons{
+    margin-top: -6%;
+  }
+
+  .btn-floating.btn-large.waves-effect.waves-light.hoverable{
+    font-size: 500%;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin-left: 6%;
+    padding-top: 15%;
+    background-color: #faf8ff;
   }
 
   #noBtn{
@@ -76,50 +130,7 @@
     margin-top: 20%;
   }
 
-  .btn-floating.btn-large.waves-effect.waves-light.hoverable{
-    font-size: 500%;
-    text-align: center;
-    width: 150px;
-    height: 150px;
-    margin-left: 6%;
-    padding-top: 15%;
-    background-color: #c2e6ff;
-  }
-
-  #ageButtons{
-    margin-top: -6%;
-  }
-
-  .btn-floating.btn-large.cool{
-    text-align: center;
-    width: 125px;
-    height: 125px;
-    padding-top: 11%;
-    box-shadow: none;
-    margin-top: 7%;
-    margin-bottom: 11%;
-    background-color: #c2e6ff;
-  }
-
-  .btn-large i {
-    font-size: 1.6rem;
-  }
-
-
-  #ask{
-    margin-top: 14%;
-    margin-left: -1%;
-    text-align: center;
-  }
-
-  #floatingbtn1{
-    margin-top: 106%;
-  }
-
-  .container-fixed-action-btn{
-    margin-right: 65%;
-    margin-top: 15%;
-  }
+  /* /////////////////////// HOME /////////////////////// */
 
   .btn-floating.btn-large.logobtn{
     margin-left: 30%;
@@ -131,23 +142,19 @@
     margin-left: 31%;
   }
 
-  #logo{
-    background-image: url("../images/logo2.png");
-    background-size: 100% 100%;
-    border-radius: 0%;
-    background-color: transparent;
-    width: 150px;
-    height: 150px;
+  .btn-floating.btn-large.cool{
+    text-align: center;
+    width: 125px;
+    height: 125px;
+    padding-top: 11%;
     box-shadow: none;
+    margin-top: 7%;
+    margin-bottom: 11%;
+    background-color: #faf8ff;
   }
 
-  #map{
-    width: 100%;
-    height: 500px;
-  }
-
-  .brand-logo{
-    font-family: 'Fugaz One', cursive;
+  .btn-large i {
+    font-size: 1.6rem;
   }
   
 /* ////////////////////////////////////////////////////////////////////// */
@@ -189,7 +196,7 @@
       height: 100px;
       margin-left: 37%;
       padding-top: 2%;
-      background-color: #c2e6ff; 
+      background-color: #e7eff7; 
       margin-bottom: none;
     }
 
