@@ -10,11 +10,6 @@ slider.oninput = function () {
     output.innerHTML = this.value;
 };
 
-// If they click on the small logo, it will take them back to the home page
-$("#smlLogo").on("click", function () {
-    window.location.href="/home";
-  }); 
-
 // $(AJAX call to api- for searching cheap drinks)
 $("button").on("click", function () {
 
