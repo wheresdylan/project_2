@@ -105,11 +105,12 @@
 
   .btn-floating.btn-large.cool{
     text-align: center;
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     padding-top: 11%;
     box-shadow: none;
     margin-top: 7%;
+    margin-bottom: 11%;
     background-color: #c2e6ff;
   }
 
@@ -134,13 +135,13 @@
   }
 
   .btn-floating.btn-large.logobtn{
-    margin-left: 28%;
+    margin-left: 30%;
     margin-top: 10%;
   }
 
   .row.home{
     margin-top: 14%;
-    margin-left: 32%;
+    margin-left: 31%;
   }
 
   #logo{
@@ -206,6 +207,7 @@
       width: 300px;
       height: 300px;
       padding-top: 30%;
+      margin-bottom: 0;
     }
 
     .btn-floating.btn-large.logobtn{
