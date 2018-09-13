@@ -14,13 +14,59 @@
         </div>
     </div>
 
+    <div class="row">
+    <div class="col 14">
+        <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Add a New Bar!</button>
+    </div>
+</div>
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Add A Bar</h4>
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row modal-form-row">
+                    <div class="input-field col s12">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="city" type="text" class="validate">
+                        <label for="city">City</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="time" type="text" class="validate">
+                        <label for="time">Happy Hour Time</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="deal" type="text" class="materialize-textarea validate"></textarea>
+                        <label for="deal">Happy Hour Deal</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class=" modal-action modal-close waves-effect waves-green btn-flat" id="submit">Submit</a>
+    </div>
+</div>
+
+
     {{!-- maps row --}}
     <div class="row"> 
         <div id="map"></div>
     </div>
 
-    {{!-- adds cards for each table item --}}
-    <div class="row addCardThree"></div>
+<div class="row addCardThree">
+
+</div>
 
 </div> {{!-- end of container --}}
 

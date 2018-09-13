@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     phone: DataTypes.STRING,
     time: DataTypes.STRING,
     deal: DataTypes.STRING,
-    image: DataTypes.STRING,
+    image: DataTypes.STRING(511),
     website: DataTypes.STRING,
   
   });

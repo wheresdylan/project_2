@@ -119,4 +119,77 @@ $(document).ready(function () {
         });
     }
 
+    $('.modal-trigger').leanModal();
+
+    $("#submit").on("click", function () {
+
+        //$(AJAX call to api- for searching cheap drinks)
+
+        var barName = $("#name").val();
+        var city = $("#city").val();
+        var description = $("#description").val();
+
+        var newCityName = city.replace(/\s/g, "+");
+        var newbarName = barName.replace(/\s/g, "+");
+
+        queryInput = newbarName + "+" + newCityName;
+
+
+
+        var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        var queryURL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + queryInput + "&key=AIzaSyCVf591AZ-evHODFReCvcQ56eAJZecmLgc";
+
+        //ajax to get the place id
+        $.ajax({
+            url: proxyUrl + queryURL,
+            method: "GET",
+
+        }).then(function (response) {
+            // console.log("AM I RUNNING");
+
+
+            var queryUrl = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" + response.results[0].place_id + "&key=AIzaSyCVf591AZ-evHODFReCvcQ56eAJZecmLgc"
+
+            //ajax to get the place details
+            $.ajax({
+                url: proxyUrl + queryUrl,
+                method: "GET",
+
+            }).then(function (response) {
+                console.log(response);
+
+
+                var barImage = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.result.photos[0].photo_reference + "&key=AIzaSyCVf591AZ-evHODFReCvcQ56eAJZecmLgc";
+                var address = response.result.formatted_address;
+                var phoneNumber = response.result.international_phone_number;
+                var website = response.result.website;
+
+                console.log(barName);
+                console.log(address);
+                console.log(phoneNumber);
+                console.log(barImage);
+                console.log(website);
+
+
+                var addBarApi = {
+                    name: barName,
+                    address: address,
+                    phone: phoneNumber,
+                    image: barImage,
+                    website: website,
+                    description: description
+
+                }
+
+
+                $.post("api/unique",addBarApi );
+
+            });
+
+        });
+
+
+
+    });
+
 });
