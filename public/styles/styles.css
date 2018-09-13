@@ -19,6 +19,7 @@
 } */
 
 
+
 .container1 {
   align-content: center;
   background: url ("cheapNeon.jpg");
@@ -148,10 +149,6 @@ main {
 
   @media only screen and (min-width: 768px){
 
-    .ul-mobile-home{
-      display: none;
-    }
-
     #logo{
       background-image: url("../images/logo2.png");
       background-size: 100% 100%;
@@ -165,10 +162,6 @@ main {
     #home{
       margin-left: 16%;
       margin-top: -7%;
-    }
-
-    .home-logo{
-      margin-left: 41%;
     }
 
     #ask{
@@ -194,34 +187,17 @@ main {
       margin-top: -3%;
     }
 
+    .row.home{
+      margin-left: -23%;
+    }
+
     .btn-floating.btn-large.cool{
-      width: 150px;
-      height: 150px;
-      padding-top: 20%;
+      margin-left: 31%;
     }
 
     .btn-floating.btn-large.logobtn{
-      margin-left: 138%;
-      margin-top: 5%;
-    }
-
-    .container-fixed-action-btn{
-      margin-top: 7%;
-      margin-left: 10%;
-    }
-
-    .row.home-desktop{
-      margin-right: -255%;
-      display: block;
-    }
-
-    .btn-floating.home-desktop{
-      width: 250px;
-      height: 250px;
-      margin-top: 25%;
-      background-color: #c2e6ff;
-      padding-top: 29%;
-
+      margin-left: 40%;
+      margin-top: 5%;      
     }
 
   }
