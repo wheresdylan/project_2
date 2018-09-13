@@ -39,18 +39,18 @@ $(document).ready(function () {
     function makeCard(index, url, title) {
         var card = $(
             `
-<div id="card${index}" class="col s6 m4">
-  <div class="card">
-    <div class="card-image">
-        <img src="${url}">
-        <span class="card-title gradient">"${title}"</span>
-    </div>
-    <div class="card-content">
-        <strong>Card Content</strong>
-    </div>
-  </div>
-</div>
-`
+            <div id="card${index}" class="col s6 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="${url}">
+                    <span class="card-title gradient">"${title}"</span>
+                </div>
+                <div class="card-content">
+                    <strong>Card Content</strong>
+                </div>
+            </div>
+            </div>
+            `
         );
         $(".addCard").append(card);
     }
@@ -114,7 +114,7 @@ $(document).ready(function () {
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
                     for (var i = 0; i < results.length; i++) {
                         console.log(barNames[x] + " found");
-                        createMarker(results[i]);
+                        createMarker(results[i], x);
                     }
                 }
                 x++;
@@ -123,20 +123,41 @@ $(document).ready(function () {
                 }
             };
 
-            function createMarker(place) {
+            function createMarker(place, index) {
+                var image = '../images/logo.png'
                 var placeLoc = place.geometry.location;
                 var marker = new google.maps.Marker({
                     map: map,
+                    icon: image,
                     position: place.geometry.location
                 });
 
                 google.maps.event.addListener(marker, 'click', function() {
                     infowindow = new google.maps.InfoWindow();
                     console.log(infowindow);
-                    infowindow.setContent(place.name);
+                    infowindow.setContent(
+                    `<div id="content"> 
+                        <div id="siteNotice"> 
+                        </div>
+
+                        <h5 id="firstHeading" class="firstHeading">
+                        ` + place.name + `
+                        </h5> 
+                        
+                        <div id="bodyContent"> 
+
+                            <h6>
+                            <a href="#card${index}"> 
+                            More Info!</a> 
+                            </h6>
+
+                        </div> 
+                    </div>`);
                     // infowindow.setContent(place.hours);
                     infowindow.open(map, this);
                 });
+
+                
             }
     
             
