@@ -2,6 +2,8 @@ $(document).ready(function () {
 
 addCard();
 
+var direcPlace;
+
 function makeCard(index, url, title, description, website) {
     var card = $(
         `
@@ -115,6 +117,11 @@ function makeCard(index, url, title, description, website) {
                             More Info!</a> 
                             </h6>
 
+                            <h6>
+                            <a href="https://www.google.com/maps/dir/?api=1&origin=` + userLocation +`&destination=` + place.name + `&travelmode=driving"> Get Directions Here!</a>
+                            </h6>
+
+
                         </div> 
                     </div>`);
                     infowindow.open(map, this);
@@ -135,6 +142,8 @@ function makeCard(index, url, title, description, website) {
 
         var newCityName = city.replace(/\s/g, "+");
         var newbarName = barName.replace(/\s/g, "+");
+
+        barName = direcPlace;
 
         queryInput = newbarName + "+" + newCityName;
 
