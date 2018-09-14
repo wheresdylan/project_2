@@ -2,8 +2,6 @@ $(document).ready(function () {
 
 addCard();
 
-var direcPlace;
-
 function makeCard(index, url, title, description, website) {
     var card = $(
         `
