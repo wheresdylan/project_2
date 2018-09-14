@@ -2,17 +2,17 @@ $(document).ready(function () {
 
 addCard();
 
-function makeCard(index, url, title) {
+function makeCard(index, url, title, description, website) {
     var card = $(
         `
         <div id="card${index}" class="col s6 m4">
         <div class="card">
         <div class="card-image">
-            <img src="${url}">
-            <span class="card-title gradient">"${title}"</span>
+        <a href="${website}"><img src="${url}"></a>
+            <span class="card-title gradient">${title}</span>
         </div>
         <div class="card-content">
-            <strong>Card Content</strong>
+            <strong>${description}</strong>
         </div>
         </div>
         </div>
@@ -31,7 +31,7 @@ function makeCard(index, url, title) {
 
             for (var i = 0; i < data.length; i++){
                 arr.push(data[i].name);
-                makeCard(i, data[i].image, data[i].name);
+                makeCard(i, data[i].image, data[i].name, data[i].description, data[i].website);
 
             }
             console.log(arr)
@@ -191,6 +191,8 @@ function makeCard(index, url, title) {
             });
 
         });
+
+        // window.location.reload()
 
 
 
